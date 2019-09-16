@@ -142,3 +142,16 @@ def second_lowest_number(numbers):
 ```
 
 Try it without a unit testing framework and with!
+
+What does this line of code do?
+
+```python
+import unittest
+
+## Tests removed for clarity
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+Are there any other values that can be in `__name__`?
