@@ -63,97 +63,6 @@ Here's that list of input data again
 We're now going to write some code that returns the second lowest number.
 
 ```python
-def second_lowest_number(numbers):
-    numbers.sort()
-    return numbers[1]
-
-
-assert second_lowest_number([9, -1, 4, 15, 7]) is 4
-```
-
-Now lets see how a testing framework displays error from python.
-
-```python
-def second_lowest_number(numbers):
-    numbers.sort()
-    return numbers[1]
-
-
-assert second_lowest_number([9]) is None
-```
-
-### Exercise
-
-Here are a list of numbers
-
-* 35 
-* 34 
-* 19 
-* 28 
-* 23
-
-Write some code to tell me what the second **highest** number is, and write a test for it.
-
-
-## Testing without a framework
-
-Here are a list of numbers
-
-* 9
-* -1
-* 4
-* 7
-* 15
-
-We're now going to write some code that returns the second lowest number.
-
-```python
-def second_lowest_number(numbers):
-    numbers.sort()
-    return numbers[1]
-
-
-assert second_lowest_number([9, -1, 4, 15, 7]) is 4
-```
-
-What happens if we now pass in a different data set?
-
-
-```python
-def second_lowest_number(numbers):
-    numbers.sort()
-    return numbers[1]
-
-
-assert second_lowest_number([9]) is None
-```
-
-### Exercise
-
-Here are a list of numbers
-
-* 35 
-* 34 
-* 19 
-* 28 
-* 23
-
-Write some code to tell me what the second **highest** number is, and write a test for it.
-
-
-## Testing with a framework
-
-Here are a list of numbers
-
-* 9
-* -1
-* 4
-* 7
-* 15
-
-We're now going to write some code that returns the second lowest number.
-
-```python
 import unittest
 
 
@@ -199,9 +108,11 @@ if __name__ == '__main__':
 
 ```
 
+This is a bit nicer formatted than previously, and we can run multiple tests.
+
 ### Exercise
 
-Here are a list of numbers
+Now you have a go
 
 * 17 
 * 47 
@@ -211,6 +122,8 @@ Here are a list of numbers
 
 
 Write some code to tell me what the second **highest** number is, and write a test for it.
+
+Next explore some of the other functions of the testing framework
 
 Try checking it returns a number that is in the provided list (hint: try out [assertIn](https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertIn))
 
