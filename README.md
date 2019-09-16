@@ -120,10 +120,9 @@ Now you have a go
 * 19
 * 3
 
+Reuse your code to find out what the second **highest** number in this list is.
 
-Write some code to tell me what the second **highest** number is, and write a test for it.
-
-Next explore some of the other functions of the testing framework
+Once you have converted it explore some of the other functions of the testing framework
 
 Try checking it returns a number that is in the provided list (hint: try out [assertIn](https://docs.python.org/3/library/unittest.html#unittest.TestCase.assertIn))
 
