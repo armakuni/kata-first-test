@@ -4,3 +4,4 @@ def second_lowest_number(numbers):
 
 
 assert second_lowest_number([9, -1, 4, 15, 7]) is 4
+assert second_lowest_number([9]) is None

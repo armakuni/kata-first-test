@@ -63,7 +63,7 @@ Here's that list of input data again
 We're now going to write some code that returns the second lowest number.
 
 ```python
-import unittest
+import pytest
 
 
 def second_lowest_number(numbers):
@@ -71,21 +71,20 @@ def second_lowest_number(numbers):
     return numbers[1]
 
 
-class LowestNumberTestCase(unittest.TestCase):
-    def test_with_multiple_numbers_it_returns_the_second_lowest(self):
-        actual = second_lowest_number([9, -1, 4, 15, 7])
-        self.assertEqual(actual, 4)
+def test_with_multiple_numbers_it_returns_the_second_lowest():
+    actual = second_lowest_number([9, -1, 4, 15, 7])
+    assert actual == 4
 
 
 if __name__ == '__main__':
-    unittest.main()
+    pytest.main()
 ```
 
 What happens if we now pass in a different data set?
 
 
 ```python
-import unittest
+import pytest
 
 
 def second_lowest_number(numbers):
@@ -93,18 +92,18 @@ def second_lowest_number(numbers):
     return numbers[1]
 
 
-class LowestNumberTestCase(unittest.TestCase):
-    def test_with_multiple_numbers_it_returns_the_second_lowest(self):
-        actual = second_lowest_number([9, -1, 4, 15, 7])
-        self.assertEqual(actual, 4)
+def test_with_multiple_numbers_it_returns_the_second_lowest():
+    actual = second_lowest_number([9, -1, 4, 15, 7])
+    assert actual == 4
 
-    def test_that_with_one_number_it_none(self):
-        actual = second_lowest_number([9])
-        self.assertEqual(actual, None)
+
+def test_that_with_one_number_it_none():
+    actual = second_lowest_number([9])
+    assert actual is None
 
 
 if __name__ == '__main__':
-    unittest.main()
+    pytest.main()
 
 ```
 
@@ -145,12 +144,14 @@ Try it without a unit testing framework and with!
 What does this line of code do?
 
 ```python
-import unittest
+import pytest
 
 ## Tests removed for clarity
 
+
 if __name__ == '__main__':
-    unittest.main()
+    pytest.main()
+
 ```
 
 Are there any other values that can be in `__name__`?
